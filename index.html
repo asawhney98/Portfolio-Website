@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aayush Sawhney — Product Leader · AI/ML · FinTech · Payments</title>
+<meta name="description" content="Senior Product Manager with 5+ years driving AI/ML platforms, Fraud Risk & Agentic Commerce products at American Express for a Premium Cardmember Experience. Open to EU/global opportunities.">
+<meta name="keywords" content="Product Manager EU AI Act, FinTech, Fraud Risk, Payments, Platform PM, Technical PM Agentic AI, LLM, MCP, RAG, AI Governance,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --ink: #1A1812;
+    --ink-soft: #3D3829;
+    --ink-muted: #7A7464;
+    --accent: #C4622D;
+    --accent-light: #EDD9CC;
+    --accent-pale: #FAF3ED;
+    --border: #DDD8CE;
+    --white: #FDFCFA;
+    --tag-bg: #EDE8DF;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 56px;
+  }
+  .nav-brand {
+    font-family: var(--font-display);
+    font-size: 17px;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex; gap: 0; list-style: none;
+  }
+  .nav-links button {
+    background: none; border: none; cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 13px; font-weight: 400;
+    color: var(--ink-muted);
+    padding: 0 1rem; height: 56px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-links button:hover { color: var(--ink); }
+  .nav-links button.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 500; }
+  .nav-cta {
+    font-size: 12px; font-weight: 500;
+    color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent); color: var(--white); }
+
+  /* ── SECTIONS ── */
+  .section { display: none; max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .section.active { display: block; }
+
+  /* ── HERO ── */
+  .hero { padding: 5rem 2rem 3rem; max-width: 780px; margin: 0 auto; }
+  .hero-eyebrow {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--accent); opacity: 0.3; max-width: 60px; }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-sub {
+    font-size: 16px; color: var(--ink-soft); max-width: 560px;
+    line-height: 1.75; margin-bottom: 2.5rem; font-weight: 300;
+  }
+  .hero-stats {
+    display: flex; gap: 2.5rem; flex-wrap: wrap;
+    padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+  }
+  .stat-item { display: flex; flex-direction: column; gap: 2px; }
+  .stat-num {
+    font-family: var(--font-display); font-size: 1.9rem; color: var(--ink); line-height: 1;
+  }
+  .stat-label { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;
+    padding: 4px 10px; background: var(--tag-bg); color: var(--ink-soft);
+    border-radius: 2px;
+  }
+  .tag.highlight { background: var(--accent-light); color: var(--accent); }
+
+  /* ── SECTION HEADER ── */
+  .section-header { margin-bottom: 3rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
+  .section-label {
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: var(--font-display); font-size: 2rem; color: var(--ink); line-height: 1.2;
+  }
+
+  /* ── RESUME ── */
+  .resume-contact {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+    margin-bottom: 2.5rem; font-size: 13px; color: var(--ink-muted);
+  }
+  .resume-contact a { color: var(--ink-muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+  .resume-contact a:hover { color: var(--accent); }
+
+  .resume-summary {
+    background: var(--accent-pale); border-left: 3px solid var(--accent);
+    padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; border-radius: 0 4px 4px 0;
+    font-size: 14px; line-height: 1.75; color: var(--ink-soft);
+  }
+
+  .resume-block { margin-bottom: 3rem; }
+  .resume-block-title {
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-muted); font-weight: 500;
+    margin-bottom: 1.25rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .job { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+  .job:last-child { border-bottom: none; margin-bottom: 0; }
+  .job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.25rem; flex-wrap: wrap; }
+  .job-title { font-size: 15px; font-weight: 500; color: var(--ink); }
+  .job-date { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.04em; white-space: nowrap; }
+  .job-company { font-size: 13px; color: var(--accent); font-weight: 400; margin-bottom: 0.6rem; }
+  .job-context { font-size: 13px; color: var(--ink-soft); font-style: italic; margin-bottom: 0.75rem; font-weight: 300; }
+  .job-metrics {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px; margin-bottom: 1rem;
+  }
+  .metric-card {
+    background: var(--white); border: 1px solid var(--border);
+    padding: 10px 12px; border-radius: 4px;
+  }
+  .metric-val { font-size: 1.3rem; font-family: var(--font-display); color: var(--ink); line-height: 1.1; }
+  .metric-desc { font-size: 11px; color: var(--ink-muted); margin-top: 2px; }
+  .job-bullets { padding-left: 1rem; list-style: none; }
+  .job-bullets li {
+    font-size: 13px; color: var(--ink-soft); padding: 3px 0;
+    padding-left: 0.75rem; position: relative; line-height: 1.6;
+  }
+  .job-bullets li::before {
+    content: '—'; position: absolute; left: -0.25rem; color: var(--accent); font-size: 12px;
+  }
+
+  .skills-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .skill-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-start; }
+  .skill-cat { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; text-transform: uppercase; min-width: 100px; padding-top: 4px; font-weight: 500; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag {
+    font-size: 12px; padding: 3px 9px; background: var(--tag-bg);
+    color: var(--ink-soft); border-radius: 2px;
+  }
+  .skill-tag.ai { background: var(--accent-light); color: var(--accent); font-weight: 500; }
+
+  .cert-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .cert-item { font-size: 12px; color: var(--ink-soft); padding: 6px 10px; background: var(--white); border: 1px solid var(--border); border-radius: 3px; }
+
+  /* ── PRODUCT PHILOSOPHY ── */
+  .philosophy-grid { display: flex; flex-direction: column; gap: 2rem; }
+  .principle {
+    display: grid; grid-template-columns: 40px 1fr; gap: 1.25rem;
+    padding-bottom: 2rem; border-bottom: 1px solid var(--border);
+  }
+  .principle:last-child { border-bottom: none; }
+  .principle-num {
+    font-family: var(--font-display); font-size: 1.6rem; color: var(--accent);
+    opacity: 0.5; line-height: 1;
+  }
+  .principle-content { padding-top: 4px; }
+  .principle-title { font-weight: 500; font-size: 15px; margin-bottom: 0.5rem; }
+  .principle-body { font-size: 14px; color: var(--ink-soft); line-height: 1.75; font-weight: 300; }
+
+  /* ── PROJECTS ── */
+  .projects-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+  .project-card {
+    background: var(--white); border: 1px solid var(--border);
+    padding: 1.75rem; border-radius: 4px;
+    transition: border-color 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .project-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: var(--accent); opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .project-card:hover { border-color: var(--accent-light); }
+  .project-card:hover::before { opacity: 1; }
+  .project-card.placeholder { opacity: 0.5; }
+  .project-card.placeholder::before { display: none; }
+  .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
+  .project-name { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); }
+  .project-badge {
+    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 2px; font-weight: 500;
+  }
+  .badge-live { background: #D4EDDA; color: #1C6B34; }
+  .badge-building { background: var(--accent-light); color: var(--accent); }
+  .badge-soon { background: var(--tag-bg); color: var(--ink-muted); }
+  .project-tagline { font-size: 13px; color: var(--ink-muted); margin-bottom: 1rem; font-style: italic; }
+  .project-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 1.25rem; font-weight: 300; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.25rem; }
+  .project-links { display: flex; gap: 1rem; }
+  .project-link {
+    font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;
+    color: var(--accent); text-decoration: none;
+    border-bottom: 1px solid var(--accent-light);
+    padding-bottom: 1px; transition: border-color 0.2s;
+  }
+  .project-link:hover { border-color: var(--accent); }
+  .placeholder-label {
+    font-size: 13px; color: var(--ink-muted); text-align: center;
+    padding: 1.5rem; border: 1px dashed var(--border); border-radius: 3px;
+    font-style: italic;
+  }
+
+  /* ── RESOURCES ── */
+  .resources-intro { font-size: 14px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 2.5rem; font-weight: 300; }
+  .resources-section { margin-bottom: 3rem; }
+  .resources-section-title {
+    font-size: 13px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-muted); margin-bottom: 1.25rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .resource-list { display: flex; flex-direction: column; gap: 1px; }
+  .resource-item {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .resource-item:last-child { border-bottom: none; }
+  .resource-title { font-size: 14px; color: var(--ink); font-weight: 400; }
+  .resource-author { font-size: 12px; color: var(--ink-muted); }
+  .resource-note { font-size: 12px; color: var(--ink-soft); font-style: italic; font-weight: 300; margin-top: 2px; }
+  .resource-tag { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; background: var(--tag-bg); color: var(--ink-muted); border-radius: 2px; white-space: nowrap; }
+
+  .thinking-block {
+    background: var(--accent-pale); border-left: 3px solid var(--accent);
+    padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; border-radius: 0 4px 4px 0;
+  }
+  .thinking-block-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 0.75rem; }
+  .thinking-block p { font-size: 14px; color: var(--ink-soft); line-height: 1.75; font-weight: 300; }
+
+  /* ── RECOMMENDATIONS ── */
+  .rec-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .rec-card {
+    background: var(--white); border: 1px solid var(--border);
+    padding: 1.5rem; border-radius: 4px;
+  }
+  .rec-quote { font-size: 14px; color: var(--ink-soft); line-height: 1.8; font-style: italic; font-weight: 300; margin-bottom: 1rem; }
+  .rec-author { font-size: 12px; color: var(--ink-muted); }
+  .rec-author strong { color: var(--ink); font-weight: 500; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border); padding: 2rem 2.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+    font-size: 12px; color: var(--ink-muted);
+    max-width: 100%;
+  }
+  footer a { color: var(--ink-muted); text-decoration: none; border-bottom: 1px solid var(--border); }
+  footer a:hover { color: var(--accent); }
+
+  /* ── AVAILABILITY BANNER ── */
+  .availability {
+    background: var(--ink); color: var(--cream);
+    padding: 10px 2.5rem;
+    font-size: 12px; letter-spacing: 0.05em;
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  }
+  .avail-dot { width: 7px; height: 7px; border-radius: 50%; background: #5CBA7D; display: inline-block; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.2)} }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    nav { padding: 0 1.25rem; }
+    .nav-links button { padding: 0 0.6rem; font-size: 11px; }
+    .hero, .section { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .hero-stats { gap: 1.5rem; }
+    .cert-list { grid-template-columns: 1fr; }
+    .job-metrics { grid-template-columns: 1fr 1fr; }
+    footer { padding: 1.5rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Availability Banner -->
+<div class="availability">
+  <span class="avail-dot"></span>
+  <span>Open to Senior PM / Lead PM opportunities in Europe (London, Amsterdam, Berlin, remote) — April 2026</span>
+  <a href="mailto:asawhney98@gmail.com" style="color: #C4622D; text-decoration: none; font-weight: 500; margin-left: auto;">Get in touch →</a>
+</div>
+
+<!-- Nav -->
+<nav>
+  <a class="nav-brand" href="#" onclick="showSection('home')">Aayush Sawhney</a>
+  <ul class="nav-links">
+    <li><button onclick="showSection('resume')" id="nav-resume">Résumé</button></li>
+    <li><button onclick="showSection('projects')" id="nav-projects">Side Projects</button></li>
+    <li><button onclick="showSection('philosophy')" id="nav-philosophy">PM Philosophy</button></li>
+    <li><button onclick="showSection('resources')" id="nav-resources">Resources</button></li>
+    <li><button onclick="showSection('recs')" id="nav-recs">Recommendations</button></li>
+  </ul>
+  <a class="nav-cta" href="mailto:asawhney98@gmail.com">Hire Me</a>
+</nav>
+
+<!-- ═══════════════════════ HOME ═══════════════════════ -->
+<div id="section-home" class="section active">
+  <div class="hero" style="padding-left:0;padding-right:0">
+    <div class="hero-eyebrow">Senior Product Manager</div>
+    <h1>Building <em>intelligent</em> products at the edge of AI & Finance</h1>
+    <p class="hero-sub">5+ years shipping Agentic AI, ML platforms, and fraud risk products at American Express — driving $200M+ projected impact. Specialising in LLM integration, multi-agent workflows, and credit decisioning at scale.</p>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">$200M+</span>
+        <span class="stat-label">Projected Annual Impact</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">75%</span>
+        <span class="stat-label">Reduction in Time-to-Market</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">150+</span>
+        <span class="stat-label">ML Models Scaled</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">Top 2%</span>
+        <span class="stat-label">Amex CFR Excellence Award</span>
+      </div>
+    </div>
+
+    <div class="hero-tags">
+      <span class="tag highlight">Agentic AI</span>
+      <span class="tag highlight">LLM Integration</span>
+      <span class="tag highlight">MCP / RAG</span>
+      <span class="tag highlight">Multi-agent Workflows</span>
+      <span class="tag">Fraud Risk</span>
+      <span class="tag">Credit Decisioning</span>
+      <span class="tag">Platform Strategy</span>
+      <span class="tag">EU AI Act Aware</span>
+      <span class="tag">Cloud Native (AWS/GCP)</span>
+      <span class="tag">MaaS Platforms</span>
+    </div>
+  </div>
+
+  <div style="max-width:780px;margin:0 auto;padding:0 0 5rem">
+    <div style="padding:2rem 0;border-top:1px solid var(--border)">
+      <div class="section-label" style="margin-bottom:1.5rem">What I do</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
+
+        <div style="padding:1.25rem;background:var(--white);border:1px solid var(--border);border-radius:4px">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);font-weight:500;margin-bottom:0.5rem">AI & Platform Products</div>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.7;font-weight:300">Designing and shipping LLM-powered platforms, agentic workflows, and MaaS infrastructure. Shipped AI-in-a-Box reducing model TTM from 30 to 7 days.</p>
+        </div>
+
+        <div style="padding:1.25rem;background:var(--white);border:1px solid var(--border);border-radius:4px">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);font-weight:500;margin-bottom:0.5rem">Fraud Risk & Trust</div>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.7;font-weight:300">End-to-end ownership of fraud detection and authentication products — from model execution to customer journey design — with 73% improvement in fraud management outcomes.</p>
+        </div>
+
+        <div style="padding:1.25rem;background:var(--white);border:1px solid var(--border);border-radius:4px">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);font-weight:500;margin-bottom:0.5rem">Revenue & Growth</div>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.7;font-weight:300">Owning DAU/MAU, offer monetisation, and merchant ROI across Amex's B2B/B2C marketplace. Drove +22% DAU and +27% conversion improvement in 3 months.</p>
+        </div>
+
+        <div style="padding:1.25rem;background:var(--white);border:1px solid var(--border);border-radius:4px">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);font-weight:500;margin-bottom:0.5rem">Credit & Lending Tech</div>
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.7;font-weight:300">Modernising underwriting journeys from mainframe to cloud-native microservices. Improved underwriting efficiency by 30% with governed decisioning aligned to regulatory standards.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ RÉSUMÉ ═══════════════════════ -->
+<div id="section-resume" class="section">
+  <div class="section-header">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Résumé</h2>
+  </div>
+
+  <div class="resume-contact">
+    <span>📍 India — Open to Relocation (EU/UK)</span>
+    <a href="mailto:asawhney98@gmail.com">asawhney98@gmail.com</a>
+    <span>+91 9899891697</span>
+    <a href="https://linkedin.com/in/aayushsawhney" target="_blank">LinkedIn ↗</a>
+  </div>
+
+  <div class="resume-summary">
+    <strong>Technical Product Leader</strong> with 5+ years driving $200M+ impact in FinTech, AI/ML platforms, and Fraud Risk. Shipped 0-to-1 Agentic AI products, LLM-powered data quality agents, and MaaS platforms at American Express. Deep experience with multi-agent workflows, RAG architecture patterns, Model Context Protocol (MCP), and EU-relevant regulatory environments (GDPR, AI Act, credit policy governance). Recognised in the top 2% globally at Amex for product strategy and execution.
+  </div>
+
+  <!-- Skills -->
+  <div class="resume-block">
+    <div class="resume-block-title">Skills & Expertise</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <div class="skill-cat">AI / ML</div>
+        <div class="skill-tags">
+          <span class="skill-tag ai">Agentic AI</span>
+          <span class="skill-tag ai">LLM Integration</span>
+          <span class="skill-tag ai">MCP</span>
+          <span class="skill-tag ai">RAG Pipelines</span>
+          <span class="skill-tag ai">Multi-agent Workflows</span>
+          <span class="skill-tag ai">Prompt Engineering</span>
+          <span class="skill-tag ai">AI Evals</span>
+          <span class="skill-tag ai">ML Lifecycle</span>
+          <span class="skill-tag ai">MaaS Platforms</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Product</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Platform Strategy</span>
+          <span class="skill-tag">0-to-1 Products</span>
+          <span class="skill-tag">OKRs / KPIs</span>
+          <span class="skill-tag">Roadmap Management</span>
+          <span class="skill-tag">A/B Testing</span>
+          <span class="skill-tag">Go-To-Market</span>
+          <span class="skill-tag">Revenue Management</span>
+          <span class="skill-tag">Backlog Management</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Technical</div>
+        <div class="skill-tags">
+          <span class="skill-tag">API Design</span>
+          <span class="skill-tag">System Design</span>
+          <span class="skill-tag">Cloud Native (AWS, GCP)</span>
+          <span class="skill-tag">Microservices</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Agile / JIRA</span>
+          <span class="skill-tag">Postman</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat">Domain</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Fraud Risk</span>
+          <span class="skill-tag">Credit Decisioning</span>
+          <span class="skill-tag">Digital Lending</span>
+          <span class="skill-tag">Underwriting</span>
+          <span class="skill-tag">eCommerce</span>
+          <span class="skill-tag">EU AI Act (Awareness)</span>
+          <span class="skill-tag">GDPR</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work Experience -->
+  <div class="resume-block">
+    <div class="resume-block-title">Work Experience</div>
+
+    <!-- SPM -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Senior Product Manager</div>
+        <div class="job-date">May 2025 – Present</div>
+      </div>
+      <div class="job-company">American Express</div>
+      <p class="job-context">Owns the Amex Offers & Deals marketplace — B2C cardmember experience + B2B merchant ecosystem — and Fraud Risk products across the portfolio.</p>
+      <div class="job-metrics">
+        <div class="metric-card"><div class="metric-val">+22%</div><div class="metric-desc">DAU via personalised offer ranking</div></div>
+        <div class="metric-card"><div class="metric-val">+27%</div><div class="metric-desc">Offer conversion improvement</div></div>
+        <div class="metric-card"><div class="metric-val">73%</div><div class="metric-desc">Fraud management improvement</div></div>
+      </div>
+      <ul class="job-bullets">
+        <li>Drove DAU growth by launching personalised offer ranking and discovery surfaces, solving flat QoQ stagnation — +22% DAU, +18% CTR, +15% repeat engagement in 3 months.</li>
+        <li>Reduced offer view→redemption drop-off 40% by simplifying eligibility cues and conversion flows, improving 30-day retention by +12%.</li>
+        <li>Launched AI-powered Suspect Dispute Management process synthesising customer friction data, improving fraud management outcomes by 73%.</li>
+      </ul>
+    </div>
+
+    <!-- TPM -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Technical Product Manager</div>
+        <div class="job-date">May 2023 – April 2025</div>
+      </div>
+      <div class="job-company">American Express</div>
+      <p class="job-context">Led 2 zero-to-one products and 2 customer digital journeys (New Accounts, Check Spend Power) on the enterprise MaaS Platform and credit decisioning stack.</p>
+      <div class="job-metrics">
+        <div class="metric-card"><div class="metric-val">$200M+</div><div class="metric-desc">Net projected annual impact</div></div>
+        <div class="metric-card"><div class="metric-val">75%+</div><div class="metric-desc">Time-to-Market reduction (30→7 days)</div></div>
+        <div class="metric-card"><div class="metric-val">$10M+</div><div class="metric-desc">Annual tax incentives via cross-entity ML validation</div></div>
+      </div>
+      <ul class="job-bullets">
+        <li>Architected 3-stage MaaS roadmap as enterprise-wide platform for all Risk Model Execution across BUs — onboarded Amex SGP Data Science CoE, enabled automated ML validation between SGP and US entities.</li>
+        <li>Shipped AI-in-a-Box agentic framework removing 60% development redundancy — model TTM from 30 to 7 days, test cycles from 6 to 2; core architectural pattern mirrors MCP/multi-agent design principles.</li>
+        <li>Conceptualised and launched AI-powered Data Quality agent automating metadata validation across Models, Real-Time Variables, and native data — 40% accuracy improvement, 70% reduction in manual review effort.</li>
+        <li>Led SDLC execution for credit decisioning platform enabling real-time risk assessment across New Accounts, line increases, and transaction authorisation in regulated environments.</li>
+      </ul>
+    </div>
+
+    <!-- PO -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Product Owner</div>
+        <div class="job-date">April 2022 – April 2023</div>
+      </div>
+      <div class="job-company">American Express</div>
+      <p class="job-context">Led modernisation of credit and risk platform — migrating from mainframe to cloud-native API architecture across US and 23 international markets.</p>
+      <div class="job-metrics">
+        <div class="metric-card"><div class="metric-val">150+</div><div class="metric-desc">ML models scaled to real-time journeys</div></div>
+        <div class="metric-card"><div class="metric-val">$50M+</div><div class="metric-desc">Projected annual impact</div></div>
+        <div class="metric-card"><div class="metric-val">50+</div><div class="metric-desc">Director teams coordinated</div></div>
+      </div>
+      <ul class="job-bullets">
+        <li>Drove model and data migration from mainframe to cloud-native API integrations for New Accounts and Line Increase journeys.</li>
+        <li>Scaled platform adoption to 150+ ML models for real-time customer journeys across US and 23 international markets.</li>
+      </ul>
+    </div>
+
+    <!-- Odessa -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Business Analyst</div>
+        <div class="job-date">May 2021 – March 2022</div>
+      </div>
+      <div class="job-company">Odessa Inc., Bangalore</div>
+      <p class="job-context">Core product delivery role on Odessa Core — a leading lease and loan management platform.</p>
+      <ul class="job-bullets">
+        <li>Reduced rework by 30% through centralised demand collection and business analysis for 8 product enhancements.</li>
+        <li>Improved resource utilisation by 40% by leading sprint planning aligned to go-live dates.</li>
+      </ul>
+    </div>
+
+    <!-- Siemens -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Management Trainee — Business Development</div>
+        <div class="job-date">May 2020 – Sept 2020</div>
+      </div>
+      <div class="job-company">Siemens Financial Services, Bangalore</div>
+      <ul class="job-bullets">
+        <li>Opened project opportunities worth ₹600Cr including entry into the indigenous defence manufacturing sector.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="resume-block">
+    <div class="resume-block-title">Education</div>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">MBA — Technology Management</div>
+        <div class="job-date">2019 – 2021</div>
+      </div>
+      <div class="job-company">NMIMS Mumbai</div>
+      <p class="job-context">Marketing, Finance. National finalist — IIT Bombay business valuation competition.</p>
+    </div>
+    <div class="job" style="border-bottom:none;margin-bottom:0;padding-bottom:0">
+      <div class="job-header">
+        <div class="job-title">B.E. — Computer Science</div>
+        <div class="job-date">2016 – 2019</div>
+      </div>
+      <div class="job-company">NMIMS Mumbai</div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="resume-block">
+    <div class="resume-block-title">Certifications & Programmes</div>
+    <div class="cert-list">
+      <div class="cert-item">Amex New People Leader Programme</div>
+      <div class="cert-item">Product Management & AI Outskill Programme</div>
+      <div class="cert-item">Harvard Leadership Edge — Building Your Data Story</div>
+      <div class="cert-item">University of Pennsylvania — Customer Analytics</div>
+      <div class="cert-item">BCG Digital Transformation Virtual Experience</div>
+      <div class="cert-item">Google Digital Garage — Digital Marketing</div>
+      <div class="cert-item">Dell EMC Cloud Computing & Information Storage</div>
+      <div class="cert-item">HubSpot — Inbound Marketing & Email Marketing</div>
+    </div>
+  </div>
+
+  <!-- Achievements -->
+  <div class="resume-block">
+    <div class="resume-block-title">Achievements</div>
+    <ul class="job-bullets" style="padding-left:0">
+      <li>Amex CFR Excellence Award 2023 & 2024 — Top 2% globally across 8 locations in strategy & product</li>
+      <li>National Finalist — Mulyankan, IIT Bombay Business Valuation Competition</li>
+      <li>2nd Position — HiMedia National Case Challenge, WeLingkar B-School</li>
+      <li>Co-Founder & Coordinator — Udaan Mentorship Project, implemented across 500+ students</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+<div id="section-projects" class="section">
+  <div class="section-header">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Side Projects</h2>
+  </div>
+  <p style="font-size:14px;color:var(--ink-soft);margin-bottom:2.5rem;font-weight:300;line-height:1.75">These are products I build outside of work — independent experiments in AI-native product thinking. They reflect how I approach problems when I have full autonomy over scope, design, and execution.</p>
+
+  <div class="projects-grid">
+
+    <!-- PRISM -->
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-name">PRISM — TradeIQ</div>
+        <span class="project-badge badge-building">In Development</span>
+      </div>
+      <div class="project-tagline">The Retail Investor's Hedge Fund Engine</div>
+      <p class="project-desc">An AI-native investment intelligence platform that fetches real-time stock and holdings data to define a thesis and entry points based on macro conditions and PRISM Parameters. Designed to give retail investors the analytical rigour of institutional research, powered by LLM-driven synthesis and agentic data retrieval.</p>
+      <p class="project-desc">Built with a product-first mindset: structured PRD, a live backlog of analytical gaps vs MVP priorities, and iterative release thinking. PRISM is both a product and a demonstration of AI PM workflow — from discovery to roadmap to execution.</p>
+      <div class="project-tags">
+        <span class="tag highlight">Agentic AI</span>
+        <span class="tag highlight">LLM</span>
+        <span class="tag">Real-time Data</span>
+        <span class="tag">Investment Thesis</span>
+        <span class="tag">Macro Analysis</span>
+        <span class="tag">RAG</span>
+        <span class="tag">0-to-1 Product</span>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://www.notion.so/PRISM-The-Retail-Investor-s-Hedge-Fund-Engine-v3-3241f4c5e542816391eecf574287bff2" target="_blank">View Product Doc ↗</a>
+        <a class="project-link" href="https://www.notion.so/TradeIQ-Analytical-Gaps-vs-PRISM-MVP-2-Backlog-32a1f4c5e5428147b399e094bd77fcb8" target="_blank">View Backlog ↗</a>
+      </div>
+    </div>
+
+    <!-- Placeholder 1 -->
+    <div class="project-card placeholder">
+      <div class="project-header">
+        <div class="project-name">Project #2</div>
+        <span class="project-badge badge-soon">Coming Soon</span>
+      </div>
+      <div class="placeholder-label">Next project in the pipeline. Check back soon.</div>
+    </div>
+
+    <!-- Placeholder 2 -->
+    <div class="project-card placeholder">
+      <div class="project-header">
+        <div class="project-name">Project #3</div>
+        <span class="project-badge badge-soon">Coming Soon</span>
+      </div>
+      <div class="placeholder-label">Ideas in progress — being scoped and validated.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════ PM PHILOSOPHY ═══════════════════════ -->
+<div id="section-philosophy" class="section">
+  <div class="section-header">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Product Philosophy</h2>
+  </div>
+  <p style="font-size:14px;color:var(--ink-soft);margin-bottom:3rem;font-weight:300;line-height:1.75">These are the principles I keep returning to — shaped by shipping AI products in regulated financial services environments, managing platforms with $200M+ stakes, and building side projects entirely alone.</p>
+
+  <div class="philosophy-grid">
+
+    <div class="principle">
+      <div class="principle-num">01</div>
+      <div class="principle-content">
+        <div class="principle-title">Ship the feedback loop, not just the feature</div>
+        <p class="principle-body">The most valuable product primitive is a fast, honest signal. Before I prioritise any feature, I ask: will this teach us something? In AI products especially, shipping a rough eval framework matters more than a polished UI no one uses. The product isn't the output — it's the learning rate.</p>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">02</div>
+      <div class="principle-content">
+        <div class="principle-title">Platforms are bets on other people's creativity</div>
+        <p class="principle-body">When I led the MaaS platform at Amex, the real metric wasn't how many models we onboarded — it was how many teams stopped asking us for help. A good platform makes you unnecessary in the best possible way. Platform PMs should be optimising for adoption without handholding.</p>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">03</div>
+      <div class="principle-content">
+        <div class="principle-title">Agentic AI needs a different risk contract</div>
+        <p class="principle-body">Shipping an LLM feature and shipping an agentic workflow are fundamentally different bets. Agents fail in novel ways — tool misuse, cascading errors, hallucinated confidence. The PM's job is to define the failure modes before the first demo. In regulated environments (credit, fraud, EU AI Act scope), the auditability of decisions is non-negotiable, not an afterthought.</p>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">04</div>
+      <div class="principle-content">
+        <div class="principle-title">Metrics are a compass, not a destination</div>
+        <p class="principle-body">I've shipped features that hit OKRs and hurt the product. DAU is easy to inflate. Retention tells you the truth. I've learned to be suspicious of metrics that move in the same direction as incentives, and to always pair a leading indicator with a lagging one that can contradict it.</p>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">05</div>
+      <div class="principle-content">
+        <div class="principle-title">The best roadmap decision is often a deletion</div>
+        <p class="principle-body">Roadmaps accumulate. Every sprint, scope grows. The hardest — and most underrated — PM skill is removing things: killing features, cutting scope, saying no to a stakeholder's pet idea. At Amex, reducing the offer→redemption funnel by removing eligibility friction outperformed three new features we had been building in parallel.</p>
+      </div>
+    </div>
+
+    <div class="principle">
+      <div class="principle-num">06</div>
+      <div class="principle-content">
+        <div class="principle-title">Cross-functional isn't a soft skill — it's infrastructure</div>
+        <p class="principle-body">You can have the right strategy and still fail if alignment is an afterthought. I've coordinated across 50+ Director teams. The ones that ship fast aren't the ones with the most talented people — they're the ones with the clearest decision rights, the fewest approval loops, and a shared definition of done.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════ RESOURCES ═══════════════════════ -->
+<div id="section-resources" class="section">
+  <div class="section-header">
+    <div class="section-label">Resources</div>
+    <h2 class="section-title">PM Resources</h2>
+  </div>
+
+  <p class="resources-intro">A mix of what I actually read and frameworks I've built from experience. Curated for technical PMs working at the intersection of AI and product strategy — not a generic reading list.</p>
+
+  <!-- My Thinking -->
+  <div class="resources-section">
+    <div class="resources-section-title">My Frameworks & Thinking</div>
+
+    <div class="thinking-block">
+      <div class="thinking-block-title">On Evaluating Agentic AI Products</div>
+      <p>Traditional product metrics break with agents. You can't measure success with DAU alone when the agent operates autonomously. I use a 3-layer eval: <strong>Task completion rate</strong> (did it do the thing?), <strong>Confidence calibration</strong> (did it know when not to try?), and <strong>Audit traceability</strong> (can compliance reconstruct the decision path?). The third is often missing and always the most expensive to retrofit.</p>
+    </div>
+
+    <div class="thinking-block">
+      <div class="thinking-block-title">The MaaS Platform Adoption Curve</div>
+      <p>When I built MaaS at Amex, adoption followed a pattern I now call "the 40% cliff" — teams use a platform until it can't serve 40% of their edge cases, then they fork or abandon it. The fix isn't adding features. It's designing escape hatches — extension points that let teams customise without breaking the core contract. Platforms die from rigidity, not lack of functionality.</p>
+    </div>
+
+    <div class="thinking-block">
+      <div class="thinking-block-title">EU AI Act Implications for Fraud Risk PMs</div>
+      <p>If you're shipping AI in credit, fraud, or underwriting in the EU — you're likely in the high-risk classification under Annex III. This means auditability, data lineage, human oversight mechanisms, and continuous monitoring aren't optional. As a PM, you need to bake these into the PRD, not the compliance review. August 2026 deadline is the enforcement trigger for most FinTech use cases.</p>
+    </div>
+  </div>
+
+  <!-- External -->
+  <div class="resources-section">
+    <div class="resources-section-title">Books & Long-form Reading</div>
+    <div class="resource-list">
+      <div class="resource-item">
+        <div>
+          <div class="resource-title">Inspired — Marty Cagan</div>
+          <div class="resource-note">The reference for what product should actually look like. Still relevant. Read for the culture, not the frameworks.</div>
+        </div>
+        <span class="resource-tag">Product Thinking</span>
+      </div>
+      <div class="resource-item">
+        <div>
+          <div class="resource-title">Continuous Discovery Habits — Teresa Torres</div>
+          <div class="resource-note">Best operational framework for building discovery into weekly cadence. Transformed how I run customer interviews.</div>
+        </div>
+        <span class="resource-tag">Discovery</span>
+      </div>
+      <div class="resource-item">
+        <div>
+          <div class="resource-title">Working Backwards — Bryar & Carr</div>
+          <div class="resource-note">The Amazon operating model — PR/FAQ and PRFAQ as product tools. Useful for forcing clarity on 0-to-1 products.</div>
+        </div>
+        <span class="resource-tag">Strategy</span>
+      </div>
+      <div class="resource-item">
+        <div>
+          <div class="resource-title">AI Engineering — Chip Huyen</div>
+          <div class="resource-note">Mandatory reading for any PM touching LLMs. Especially the chapters on evals, RAG tradeoffs, and inference economics.</div>
+        </div>
+        <span class="resource-tag">AI / LLM</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="resources-section">
+    <div class="resources-section-title">Articles & Newsletters I Follow</div>
+    <div class="resource-list">
+      <div class="resource-item">
+        <div>
+          <div class="resource-title">Lenny's Newsletter</div>
+          <div class="resource-note">Best signal-to-noise ratio in PM content. Especially the benchmarking issues.</div>
+        </div>
+        <span class="resource-tag">Newsletter</span>
+      </div>
+      <div class="resource-item">
+        <div>
+          <div class="resource-title">The Pragmatic Engineer — Gergely Orosz</div>
+          <div class="resource-note">For understanding engineering tradeoffs PMs routinely underestimate.</div>
+        </div>
+        <span class="resource-tag">Engineering</span>
+      </div>
+      <div class="resource-item">
+        <div>
+          <div class="resource-title">EU AI Act Monitor (via Future of Life Institute)</div>
+          <div class="resource-note">Tracking August 2026 enforcement deadlines. Critical for FinTech PMs expanding into EU markets.</div>
+        </div>
+        <span class="resource-tag">Regulation</span>
+      </div>
+      <div class="resource-item">
+        <div>
+          <div class="resource-title">Reforge Product Strategy Course</div>
+          <div class="resource-note">Network effects and platform strategy — most rigorous framework I've found for enterprise platform thinking.</div>
+        </div>
+        <span class="resource-tag">Course</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ RECOMMENDATIONS ═══════════════════════ -->
+<div id="section-recs" class="section">
+  <div class="section-header">
+    <div class="section-label">Resources</div>
+    <h2 class="section-title">Recommendations</h2>
+  </div>
+
+  <p style="font-size:14px;color:var(--ink-soft);margin-bottom:2.5rem;font-weight:300;line-height:1.75">What colleagues, managers, and collaborators have said. To be updated with LinkedIn recommendations — placeholder structure in place.</p>
+
+  <div class="rec-list">
+    <div class="rec-card" style="opacity:0.5">
+      <div class="rec-quote">"Recommendation from a senior leader or direct manager at American Express — to be added here."</div>
+      <div class="rec-author"><strong>Name, Title</strong> · American Express</div>
+    </div>
+    <div class="rec-card" style="opacity:0.5">
+      <div class="rec-quote">"Recommendation from a cross-functional partner, engineering lead, or data science collaborator."</div>
+      <div class="rec-author"><strong>Name, Title</strong> · Organisation</div>
+    </div>
+    <div class="rec-card" style="opacity:0.5">
+      <div class="rec-quote">"Recommendation from a stakeholder, director, or external collaborator."</div>
+      <div class="rec-author"><strong>Name, Title</strong> · Organisation</div>
+    </div>
+  </div>
+
+  <div style="margin-top:2.5rem;padding:1.25rem;background:var(--white);border:1px solid var(--border);border-radius:4px;font-size:13px;color:var(--ink-muted)">
+    You can request a recommendation via <a href="https://linkedin.com/in/aayushsawhney" target="_blank" style="color:var(--accent)">LinkedIn ↗</a> or reach out directly at <a href="mailto:asawhney98@gmail.com" style="color:var(--accent)">asawhney98@gmail.com</a>.
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <span>Aayush Sawhney · Product Leader · AI/ML · FinTech</span>
+  <span>
+    <a href="mailto:asawhney98@gmail.com">asawhney98@gmail.com</a> ·
+    <a href="https://linkedin.com/in/aayushsawhney" target="_blank">LinkedIn ↗</a>
+  </span>
+</footer>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+
+  if (id === 'home') {
+    document.getElementById('section-home').classList.add('active');
+  } else {
+    document.getElementById('section-' + id).classList.add('active');
+    const btn = document.getElementById('nav-' + id);
+    if (btn) btn.classList.add('active');
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Init
+showSection('home');
+</script>
+</body>
+</html>

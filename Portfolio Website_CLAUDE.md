@@ -3,6 +3,8 @@
 This file tells Claude (and any AI assistant) exactly how to work on this project.
 Read this before touching any file.
 
+
+This is the link where the site is currently hosted [via github pages: https://asawhney98.github.io/Portfolio-Website/]
 ---
 
 ## Project Overview

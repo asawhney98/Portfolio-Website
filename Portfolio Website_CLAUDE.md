@@ -10,7 +10,7 @@ This is the link where the site is currently hosted [via github pages: https://a
 ## Project Overview
 
 A single-file personal portfolio website for Aayush Sawhney, Senior Product Manager.
-Audience: EU and global hiring managers, recruiters, founders.
+Audience: global hiring managers, recruiters, founders & product managers.
 Primary job: Convert portfolio visits into interview conversations — fast.
 
 **Stack:** Pure HTML + CSS + vanilla JS. Zero frameworks. Zero build steps.
@@ -85,27 +85,33 @@ If you refactor any section, verify these survive.
 
 ```
 Nav
-├── About Me
-│   ├── Résumé        (default active tab)
-│   ├── Side Projects
-│   └── Product Philosophy
-└── Resources
-    ├── Recommendations
-    └── PM Resources
+├── Résumé
+├── Side Projects
+├── PM Philosophy
+├── Resources
+└── [Recommendations — REMOVED, see TODO below]
 ```
 
-Tab switching is handled by showPanel(), showSub(), showResourceSub() in the
-inline <script> at the bottom of index.html. Keep all JS inline.
+Tab switching is handled by showSection() in the inline <script> at the bottom
+of index.html. Keep all JS inline.
 
 ---
 
 ## What Needs Updating (owner action items)
 
 - [ ] LinkedIn URL in contact strip (currently placeholder /in/)
-- [ ] 3 x Recommendation quotes — replace placeholder cards with real text
 - [ ] Projects 03 and 04 — fill in when ready; remove placeholder class
 - [ ] "My Thinking" articles — expand each into a linked Notion page or blog post
 - [ ] Add og:image meta tag once a headshot or OG image is created
+
+### TODO — Recommendations Section
+- [ ] **RE-ADD Recommendations** when quotes are ready
+  - The nav link, CSS (.rec-list, .rec-card, .rec-quote, .rec-author), and
+    section HTML were removed in April 2026
+  - To restore: add nav button `showSection('recs')`, re-add the CSS block
+    (see git history), and add a `<div id="section-recs" class="section">` with
+    `.rec-card` blocks (quote + author name + title)
+  - Keep each quote under 3 sentences — specific outcomes beat generic praise
 
 ---
 
@@ -129,11 +135,6 @@ GitHub Pages auto-deploys within ~60 seconds.
 3. Fill in: project-type, project-name, project-desc, project-tag spans
 4. Add href to the <a> tag
 5. Verify keyword tags include at least one required EU PM keyword
-
-### Add a Recommendation
-1. Copy a .rec-card block
-2. Replace quote text, name, and title
-3. Keep quote under 3 sentences — specific outcomes beat generic praise
 
 ### Update a Metric
 1. Check the metrics table above to confirm the source
@@ -171,5 +172,5 @@ Do not use Google Analytics without explicit consent — EU GDPR applies.
 
 ---
 
-Last updated: April 2026
+Last updated: April 14, 2026
 Owner: Aayush Sawhney — asawhney98@gmail.com

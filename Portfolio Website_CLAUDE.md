@@ -161,14 +161,24 @@ GitHub Pages auto-deploys within ~60 seconds.
 
 ---
 
-## Adding Analytics (optional, owner decision)
+## Analytics — GoatCounter (active)
 
-If the owner wants to track visits, add this before </head> and nowhere else:
+**Dashboard:** https://mailspam2k6.goatcounter.com
+**Login ID:** mailspam2k6
 
-  <!-- Plausible: privacy-friendly, no cookies, EU GDPR compliant -->
-  <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
+Script tag (already in `index.html`, just before `</head>`):
 
-Do not use Google Analytics without explicit consent — EU GDPR applies.
+```html
+<!-- GoatCounter: privacy-friendly analytics, no cookies, free forever -->
+<script data-goatcounter="https://mailspam2k6.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+```
+
+Notes:
+- No cookie banner required — GDPR-compliant by default
+- Your own visits are ignored by default; disable in dashboard Settings if you want to count them
+- Single-page app caveat: only logs one pageview per visit (initial load), not per tab switch
+- Do not change or duplicate this script tag
 
 ---
 

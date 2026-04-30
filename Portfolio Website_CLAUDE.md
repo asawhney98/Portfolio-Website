@@ -170,7 +170,7 @@ Script tag (already in `index.html`, just before `</head>`):
 
 ```html
 <!-- GoatCounter: privacy-friendly analytics, no cookies, free forever -->
-<script data-goatcounter="https://mailspam2k6.goatcounter.com/count"
+<script data-goatcounter="https://mailspam2k6.goatcounter.com"
         async src="//gc.zgo.at/count.js"></script>
 ```
 

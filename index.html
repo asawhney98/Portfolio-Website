@@ -845,10 +845,13 @@
       </div>
       <div class="job-company">NMIMS Mumbai</div>
       <p class="job-context">Marketing, Finance. National finalist — IIT Bombay business valuation competition.</p>
+      <ul class="job-bullets">
+        <li>Awarded Distinguished Student Ambassador — recognised for leadership and institutional representation across the MBA cohort.</li>
+      </ul>
     </div>
     <div class="job" style="border-bottom:none;margin-bottom:0;padding-bottom:0">
       <div class="job-header">
-        <div class="job-title">B.E. — Computer Science</div>
+        <div class="job-title">B.E. — Computer Science Engineering</div>
         <div class="job-date">2016 – 2019</div>
       </div>
       <div class="job-company">NMIMS Mumbai</div>
@@ -1102,7 +1105,97 @@
     </div><!-- /.project-card PRISM -->
 
 
-    <!-- ══ 3 + 4. Secondary cards ══ -->
+    <!-- ══ 3. MERCHANT TOKEN ANALYZER ══ -->
+    <div class="project-card">
+      <div class="pc-inner">
+
+        <span class="pc-badge pcb-dev">Demo · Prototype</span>
+
+        <div class="pc-title">Merchant Token Analyzer</div>
+        <div class="pc-tagline">Enterprise fintech demo prototype — AI-assisted merchant tokenization readiness analyzer built to simulate internal AmEx payments tooling.</div>
+
+        <p class="pc-desc">A production-quality demo app purpose-built for a Senior PM interview at American Express in the payments / network tokenization domain. Mimics the look, feel, and analytical depth of internal AmEx tooling — dark-mode enterprise UI, three analytical tabs, 12 typed-mock components, and AI-generated insights across token adoption, issuer health, and decline intelligence. Zero backend; all data is fully typed and mocked. Built as a demonstration of PM craft: formal architecture decisions, Tailwind v4 dark palette, Recharts v3 data visualisations, and lifecycle event modelling.</p>
+
+        <!-- Architecture bullets -->
+        <ul class="pc-arch-list">
+          <li>Dashboard: 4 KPI cards, token vs PAN trend chart, decline breakdown, wallet mix donut, AI insights, maturity score</li>
+          <li>Token Infrastructure tab: issuer health stats, lifecycle event stream, PAN updater dependency score, ghost token alerts</li>
+          <li>Per-Issuer Decline Intelligence: grouped bar chart + flat table comparing token vs PAN approval rates per issuer</li>
+          <li>Maturity scoring model: 4-band system (Lagging → Developing → Advanced → Leading) with amber progress bar at 64/100</li>
+          <li>Ghost token alerting: 3 flagged tokens with CRITICAL/HIGH risk badges and last-auth timestamp tracking</li>
+          <li>Fully typed mock data layer in <code style="font-size:11px;background:var(--tag-bg);padding:1px 4px;border-radius:2px">lib/mockData.ts</code> — no API calls, no auth, no backend</li>
+        </ul>
+
+        <!-- System capabilities -->
+        <div class="pc-caps-grid">
+          <div class="pc-cap">
+            <span class="pc-cap-label">Framework</span>
+            <span class="pc-cap-val">Next.js 16</span>
+          </div>
+          <div class="pc-cap">
+            <span class="pc-cap-label">Charts</span>
+            <span class="pc-cap-val">Recharts v3</span>
+          </div>
+          <div class="pc-cap">
+            <span class="pc-cap-label">Styling</span>
+            <span class="pc-cap-val">Tailwind v4</span>
+          </div>
+          <div class="pc-cap">
+            <span class="pc-cap-label">Data</span>
+            <span class="pc-cap-val">Fully Mocked</span>
+          </div>
+        </div>
+
+        <!-- Tags -->
+        <div class="pc-tags">
+          <span class="tag highlight">Network Tokenization</span>
+          <span class="tag highlight">Payments Intelligence</span>
+          <span class="tag highlight">AmEx Domain</span>
+          <span class="tag">Issuer Health Monitoring</span>
+          <span class="tag">Decline Analytics</span>
+          <span class="tag">Ghost Token Detection</span>
+          <span class="tag">Next.js · TypeScript</span>
+          <span class="tag">Recharts · Tailwind v4</span>
+          <span class="tag">Dark Mode UI</span>
+          <span class="tag">Enterprise Prototype</span>
+        </div>
+
+        <!-- CTA links -->
+        <div class="pc-links">
+          <a href="https://github.com/asawhney98" target="_blank" rel="noopener" class="pc-link-filled">GitHub ↗</a>
+          <a href="#" class="pc-link-ghost">Live Demo ↗</a>
+        </div>
+
+      </div><!-- /.pc-inner -->
+
+      <!-- Operational metrics strip -->
+      <div class="pc-metrics-strip">
+        <div class="pc-metric">
+          <span class="pc-metric-val">3</span>
+          <span class="pc-metric-label">Analytical Tabs</span>
+        </div>
+        <div class="pc-metric">
+          <span class="pc-metric-val">12</span>
+          <span class="pc-metric-label">Components</span>
+        </div>
+        <div class="pc-metric">
+          <span class="pc-metric-val">64/100</span>
+          <span class="pc-metric-label">Maturity Score</span>
+        </div>
+        <div class="pc-metric">
+          <span class="pc-metric-val">58%</span>
+          <span class="pc-metric-label">Token Adoption Rate</span>
+        </div>
+        <div class="pc-metric">
+          <span class="pc-metric-val">$4.2M</span>
+          <span class="pc-metric-label">Simulated Monthly Volume</span>
+        </div>
+      </div>
+
+    </div><!-- /.project-card Merchant Token Analyzer -->
+
+
+    <!-- ══ 4 + 5. Secondary cards ══ -->
     <div class="projects-secondary-row">
 
       <!-- AI Reliability Lab -->
@@ -1350,7 +1443,7 @@ function showSection(id) {
 }
 
 // Init
-showSection('home');
+showSection('projects');
 </script>
 </body>
 </html>

@@ -182,5 +182,69 @@ Notes:
 
 ---
 
-Last updated: April 14, 2026
+---
+
+## Career Timeline Component
+
+**Location in `index.html`:** Inside `#section-home`, between the closing `</div>` of `.hero` and the opening `<div style="max-width:960px…">` of the "What I do" section. It is **not** inside any tab section.
+
+**Structure:**
+```
+.career-timeline                    ← outer container, max-width 780px
+  .timeline-label                   ← "Career at a glance" label
+  .timeline-scroll-wrapper          ← positions the fade gradient ::after
+    .timeline-track                 ← flex row, overflow-x: auto, scrollbar hidden
+      .tl-card.tl-edu               ← education entry (muted top bar)
+      .tl-card.tl-work              ← work entry (accent top bar)
+      .tl-card.tl-work.tl-current   ← current role (accent border + pale bg)
+        .tl-current-badge           ← "Current" badge
+        .tl-period                  ← date range
+        .tl-title                   ← job/degree title
+        .tl-org                     ← organisation
+  .timeline-swipe-hint              ← "swipe →" label, display:none on desktop
+```
+
+**CSS variables touched:** `--cream`, `--white`, `--border`, `--ink-muted`, `--accent`, `--accent-light`, `--accent-pale`, `--font-body`.
+No new hex values introduced.
+
+**Category colour system:**
+- `.tl-edu` — 3px top bar uses `var(--border)` (muted/neutral)
+- `.tl-work` — 3px top bar uses `var(--accent)` (terracotta)
+- `.tl-current` — additionally sets `border-color: var(--accent)` and `background: var(--accent-pale)`
+
+**Mobile behaviour:** At ≤640px, `.timeline-swipe-hint` becomes visible and card width shrinks to 154px. The `::after` gradient on `.timeline-scroll-wrapper` provides a fading right edge at all widths.
+
+### Add a future timeline entry
+
+Copy-paste this snippet inside `.timeline-track`, in chronological order:
+
+```html
+<!-- Work entry -->
+<div class="tl-card tl-work">
+  <div class="tl-period">Mon YYYY – Mon YYYY</div>
+  <div class="tl-title">Job Title Here</div>
+  <div class="tl-org">Organisation Name</div>
+</div>
+
+<!-- Education entry -->
+<div class="tl-card tl-edu">
+  <div class="tl-period">YYYY–YYYY</div>
+  <div class="tl-title">Degree, Field</div>
+  <div class="tl-org">Institution Name</div>
+</div>
+
+<!-- Current role (replace the existing .tl-current card first) -->
+<div class="tl-card tl-work tl-current">
+  <span class="tl-current-badge">Current</span>
+  <div class="tl-period">Mon YYYY – Present</div>
+  <div class="tl-title">Job Title Here</div>
+  <div class="tl-org">Organisation Name</div>
+</div>
+```
+
+When promoting a past role, remove `.tl-current` and `.tl-current-badge` from the old card.
+
+---
+
+Last updated: June 17, 2026
 Owner: Aayush Sawhney — asawhney98@gmail.com

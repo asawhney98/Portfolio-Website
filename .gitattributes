@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
+git add index.html "Portfolio Website_CLAUDE.md" && git commit -m "Add horizontal career timeline to hero section" && git push origin main# Auto detect text files and perform LF normalization
 * text=auto

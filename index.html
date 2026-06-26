@@ -543,9 +543,9 @@
 
   /* ── CAREER TIMELINE ── */
   .career-timeline {
-    max-width: 780px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 0 0 2.5rem;
+    padding: 0 0 3rem;
     position: relative;
   }
   .timeline-label {
@@ -554,7 +554,7 @@
     text-transform: uppercase;
     color: var(--ink-muted);
     font-weight: 500;
-    margin-bottom: 0.85rem;
+    margin-bottom: 1rem;
   }
   .timeline-scroll-wrapper {
     position: relative;
@@ -564,39 +564,28 @@
     content: '';
     position: absolute;
     top: 0; right: 0; bottom: 0;
-    width: 60px;
+    width: 80px;
     background: linear-gradient(to right, transparent, var(--cream));
     pointer-events: none;
     z-index: 1;
   }
   .timeline-track {
     display: flex;
-    gap: 10px;
+    gap: 14px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
-    /* hide scrollbar but keep scroll */
+    padding-bottom: 12px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
   .timeline-track::-webkit-scrollbar { display: none; }
-  /* Connector line */
-  .timeline-track::before {
-    content: '';
-    position: absolute;
-    top: 22px;
-    left: 0; right: 0;
-    height: 1px;
-    background: var(--border);
-    pointer-events: none;
-  }
   .tl-card {
     flex: 0 0 auto;
-    width: 178px;
+    width: 220px;
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 12px 13px 11px;
+    border-radius: 5px;
+    padding: 16px 16px 14px;
     position: relative;
   }
   /* Top colour bar — category indicator */
@@ -604,8 +593,8 @@
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 3px;
-    border-radius: 4px 4px 0 0;
+    height: 4px;
+    border-radius: 5px 5px 0 0;
     background: var(--border);
   }
   .tl-card.tl-work::before  { background: var(--accent); }
@@ -625,29 +614,44 @@
     color: var(--accent);
     background: var(--accent-light);
     border-radius: 2px;
-    padding: 1px 6px;
-    margin-bottom: 6px;
+    padding: 2px 7px;
+    margin-bottom: 8px;
   }
   .tl-period {
     font-size: 10px;
     color: var(--ink-muted);
     letter-spacing: 0.04em;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     line-height: 1.3;
   }
   .tl-title {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--ink);
     line-height: 1.4;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
   .tl-org {
-    font-size: 11px;
-    color: var(--accent);
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin-bottom: 5px;
   }
-  .tl-edu .tl-org { color: var(--ink-muted); }
+  /* Brand colours */
+  .tl-org-amex    { color: #016FD0; }  /* Amex blue */
+  .tl-org-siemens { color: #009999; }  /* Siemens teal */
+  .tl-org-odessa  { color: #5A2D82; }  /* Odessa purple */
+  .tl-org-nmims   { color: var(--ink-muted); font-weight: 600; }
+  .tl-product {
+    font-size: 11px;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 4px;
+    padding-top: 5px;
+    border-top: 1px solid var(--border);
+  }
   /* Swipe hint label — visible on mobile */
   .timeline-swipe-hint {
     display: none;
@@ -660,7 +664,7 @@
   }
   @media (max-width: 640px) {
     .timeline-swipe-hint { display: block; }
-    .tl-card { width: 154px; }
+    .tl-card { width: 186px; }
   }
 </style>
 <!-- GoatCounter: privacy-friendly analytics, no cookies, free forever -->
@@ -746,38 +750,40 @@
         <div class="tl-card tl-edu">
           <div class="tl-period">2016–2019</div>
           <div class="tl-title">BE, Computer Science</div>
-          <div class="tl-org">NMIMS (MPSTME)</div>
+          <div class="tl-org tl-org-nmims">NMIMS (MPSTME)</div>
         </div>
 
         <div class="tl-card tl-edu">
           <div class="tl-period">2019–2021</div>
           <div class="tl-title">MBA, Technology Management</div>
-          <div class="tl-org">NMIMS Mumbai</div>
+          <div class="tl-org tl-org-nmims">NMIMS Mumbai</div>
         </div>
 
         <!-- Work -->
         <div class="tl-card tl-work">
           <div class="tl-period">May–Sep 2020</div>
           <div class="tl-title">Management Trainee – Business Development</div>
-          <div class="tl-org">Siemens Financial Services</div>
+          <div class="tl-org tl-org-siemens">Siemens Financial Services</div>
         </div>
 
         <div class="tl-card tl-work">
           <div class="tl-period">May 2021 – Mar 2022</div>
           <div class="tl-title">Business Analyst</div>
-          <div class="tl-org">Odessa Inc.</div>
+          <div class="tl-org tl-org-odessa">Odessa Inc.</div>
         </div>
 
         <div class="tl-card tl-work">
           <div class="tl-period">Apr 2022 – Apr 2023</div>
           <div class="tl-title">Product Owner</div>
-          <div class="tl-org">American Express</div>
+          <div class="tl-org tl-org-amex">American Express</div>
+          <div class="tl-product">Risk Decision Engine · European Markets</div>
         </div>
 
         <div class="tl-card tl-work">
           <div class="tl-period">May 2023 – Apr 2025</div>
           <div class="tl-title">Technical Product Manager</div>
-          <div class="tl-org">American Express</div>
+          <div class="tl-org tl-org-amex">American Express</div>
+          <div class="tl-product">Model-as-a-Service · 0→1 & 1→15M</div>
         </div>
 
         <!-- Current role -->
@@ -785,7 +791,8 @@
           <span class="tl-current-badge">Current</span>
           <div class="tl-period">May 2025 – Present</div>
           <div class="tl-title">Senior Product Manager</div>
-          <div class="tl-org">American Express</div>
+          <div class="tl-org tl-org-amex">American Express</div>
+          <div class="tl-product">AI Fraud Detection & Agentic Infrastructure</div>
         </div>
 
       </div><!-- /.timeline-track -->
